@@ -5,7 +5,6 @@ from crewai import Agent, Task, Crew, Process
 from crewai.tools import BaseTool
 import re
 
-# Load environment variables (for non-LinkUp settings)
 load_dotenv()
 
 def get_llm_client():
@@ -39,22 +38,16 @@ class LinkUpSearchTool(BaseTool):
             return f"Error occurred while searching: {str(e)}"
 
 def clean_mcp_output(raw_text):
-    # Remove "**Thought**" and "**Final Answer**" lines
     cleaned = re.sub(r"\*\*Thought\*\*.*\n?", "", raw_text)
     cleaned = re.sub(r"\*\*Final Answer\*\*.*\n?", "", cleaned)
-    # Convert markdown headers to plain text with spacing
     cleaned = re.sub(r"^# (.*)", r"\n\1\n" + "="*40, cleaned, flags=re.MULTILINE)
     cleaned = re.sub(r"^## (.*)", r"\n\1\n" + "-"*30, cleaned, flags=re.MULTILINE)
     cleaned = re.sub(r"^### (.*)", r"\n\1\n" + "-"*20, cleaned, flags=re.MULTILINE)
     cleaned = re.sub(r"^#### (.*)", r"\n\1\n" + "-"*10, cleaned, flags=re.MULTILINE)
-    # Remove markdown bold/italics
     cleaned = re.sub(r"\*\*(.*?)\*\*", r"\1", cleaned)
     cleaned = re.sub(r"\*(.*?)\*", r"\1", cleaned)
-    # Add spacing before References
     cleaned = re.sub(r"\n---\nReferences:", r"\n\nReferences:\n", cleaned)
-    # Remove footnote markers like [^1], [^2]
     cleaned = re.sub(r"\[\^(\d+)\]", "", cleaned)
-    # Remove extra blank lines
     cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
     return cleaned.strip()
 
