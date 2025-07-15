@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "crew_research": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "./Multi-Agent-deep-researcher-mcp-windows-linux",
+        "run",
+        "server.py"
+      ],
+      "env": {
+        "LINKUP_API_KEY": "your_linkup_api_key_here"
+      }
+    }
+  }
+} 
