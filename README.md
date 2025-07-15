@@ -1,13 +1,13 @@
 # MCP Multi-Agent Deep Researcher 
 
-A multi-agent deep researcher using CrewAI for agent orchestration, LinkUp for deep web search, and the phi3 model (via Ollama) for synthesis and writing. The system produces direct, comprehensive answers with no sources/citations or agent thoughts in the output.
+A multi-agent research system built on the Model Context Protocol (MCP), using CrewAI for agent orchestration, LinkUp for deep web search, and the phi3 model (via Ollama) for synthesis and writing. Exposed as an MCP-compliant server, it delivers direct, comprehensive answers.
 
 ## Features
-- Multi-agent orchestration with CrewAI (Web Searcher, Research Analyst, Technical Writer)
-- Deep web search via LinkUp (using the LinkUp API)
-- Synthesis and reasoning with phi3 (via Ollama)
-- Exposed as an MCP server via FastAPI
-- Output is a direct, clear, and comprehensive answer 
+- MCP-Compliant Server for seamless integration into any agent ecosystem
+- CrewAI Agent Orchestration (Web Searcher → Analyst → Technical Writer)
+- LinkUp API for deep web search
+- Local phi3 Model (Ollama) for writing, synthesis, and reasoning
+- Returns clear, structured answers
 
 ## Setup
 
