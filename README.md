@@ -1,4 +1,4 @@
-# Multi-Agent Deep Researcher (MCP-powered)
+# MCP Multi-Agent Deep Researcher 
 
 A multi-agent deep researcher using CrewAI for agent orchestration, LinkUp for deep web search, and the phi3 model (via Ollama) for synthesis and writing. The system produces direct, comprehensive answers with no sources/citations or agent thoughts in the output.
 
