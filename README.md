@@ -2,11 +2,6 @@
 
 A multi-agent deep researcher using CrewAI for agent orchestration, LinkUp for deep web search, and the phi3 model (via Ollama) for synthesis and writing. The system produces direct, comprehensive answers with no sources/citations or agent thoughts in the output.
 
-## What is MCP?
-MCP (Multi-Agent Control Protocol) is a framework for coordinating multiple AI agents, each with a specialized role, to collaboratively solve complex tasks.
-In this project, MCP orchestrates agents (Web Searcher, Research Analyst, Technical Writer) to automate deep research: gathering information, analyzing it, and producing a clear, comprehensive answer.
-This approach improves quality and modularity by letting each agent focus on its area of expertise.
-
 ## Features
 - Multi-agent orchestration with CrewAI (Web Searcher, Research Analyst, Technical Writer)
 - Deep web search via LinkUp (using the LinkUp API)
