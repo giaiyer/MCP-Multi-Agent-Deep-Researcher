@@ -2,7 +2,7 @@
 name = "multi-agent-deep-researcher"
 version = "0.1.0"
 description = "MCP-powered multi-agent deep researcher using CrewAI, LinkUp, and Deepseek R1."
-authors = ["Your Name <you@example.com>"]
+
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.14"
